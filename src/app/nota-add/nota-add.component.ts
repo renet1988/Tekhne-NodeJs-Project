@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { NotaService } from '../nota.service';
+import { Nota } from '../nota';
 @Component({
   selector: 'app-nota-add',
   templateUrl: './nota-add.component.html',
@@ -7,13 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotaAddComponent implements OnInit {
 
-  constructor() { }
+  @Input() nota: Nota;
+
+
+  constructor(
+    private route: ActivatedRoute,
+    private notaService: NotaService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
   }
 
-  add(): void {
-
+  goBack(): void {
+    this.location.back();
   }
 
 }

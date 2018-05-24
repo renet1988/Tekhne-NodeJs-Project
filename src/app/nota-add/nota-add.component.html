@@ -1,29 +1,32 @@
 <h3>Anadir Nueva Nota</h3>
 <div>
-  <div class="block" >
+  <form action="nota" method="post" >
+    <div class="block" >
       <label>Nombre: </label>
       <input type="text" name="name" placeholder="Nombre de la nota" >
-  </div>
-  <div class="block" >
+    </div>
+    <div class="block" >
       <label>Cuerpo: </label>
-      <input type="textarea" name="body" placeholder="Cuerpo de la nota" >
-  </div>
-  <div class="block" >
+      <textarea name="body" cols="15" rows="5"></textarea>
+    </div>
+    <div class="block" >
       <label>Tipo de Nota: </label>
       <select name="tNota">
         <option value="reco">Recordatorio</option>
         <option value="cump">Cumpleanios</option>
         <option value="cita">Cita</option>
       </select>
-  </div>
-  <div class="block" >
+    </div>
+    <div class="block" >
       <label>Fecha: </label>
       <input type="date" name="date" >
-  </div>
-  <div class="block">
-    <button>Guardar</button>
-  </div>
-  <div class="block">
-    <button>Cancelar</button>
-  </div>
+    </div>
+    <div class="block">
+      <button (click)="add()" >Guardar</button>
+    </div>
+    <div class="block">
+      <button (click)="goBack()" >Cancelar</button>
+    </div>
+  </form>
+  
 </div>

@@ -1,3 +1,17 @@
-<p>
-  nota-edit works!
-</p>
+<div *ngIf="nota">
+  <h2>{{ nota.body | uppercase }} Details</h2>
+  <div class="inputClass" >
+    <label>Nombre: </label> 
+    <input class="inputClass"  [(ngModel)]="nota.name" placeholder="name"/>
+  </div>
+  <div class="inputClass" >
+    <label>Cuerpo: </label> 
+    <input class="inputClass"  [(ngModel)]="nota.body" placeholder="body"/>
+  </div>
+  <div class="inputClass" >
+    <label>Tipo de Nota: </label> 
+    <input class="inputClass"  [(ngModel)]="nota.tNota" placeholder="tNota"/>
+  </div>
+    
+  <button (click)="goBack()">go back</button>
+</div>

@@ -17,6 +17,4 @@ export class NotaService {
   getNota(id: number): Observable<Nota> {
     return of(NOTAS.find(nota => nota.id === id));
   }
-
-
 }
