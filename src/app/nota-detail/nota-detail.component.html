@@ -1,0 +1,24 @@
+<div *ngIf="nota">
+  <h2>{{ nota.body | uppercase }} Details</h2>
+  <div>
+    <label>id: </label> 
+    <span>{{nota.id}}</span>
+  </div>
+  <div>
+    <label>Tipo de Nota: </label>
+    <span>{{nota.tNota}}</span>
+  </div>
+  <div>
+    <label>Nombre: </label>
+    <span>{{nota.name}}</span>
+  </div>
+  <div>
+    <label>Cuerpo: </label>
+    <span>{{nota.body}}</span>
+  </div>
+  <div>
+    <label>Fecha: </label>
+    <span>{{nota.date | date}}</span>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

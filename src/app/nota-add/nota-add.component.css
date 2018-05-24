@@ -1,0 +1,7 @@
+.block{
+    display: grid;
+    padding: 5px;
+}
+label{
+    padding-bottom: 5px;
+}
