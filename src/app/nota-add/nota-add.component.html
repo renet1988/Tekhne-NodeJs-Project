@@ -2,16 +2,20 @@
 <div>
   <form action="nota" method="post" >
     <div class="block" >
+      <label>Id: </label>
+      <input type="number" [ngModel]='idN' placeholder="idss de la nota" >
+    </div>
+    <div class="block" >
       <label>Nombre: </label>
-      <input type="text" name="name" placeholder="Nombre de la nota" >
+      <input type="text" [ngModel]='nameN' placeholder="Nombre de la nota" >
     </div>
     <div class="block" >
       <label>Cuerpo: </label>
-      <textarea name="body" cols="15" rows="5"></textarea>
+      <textarea [ngModel]='bodyN' cols="15" rows="5"></textarea>
     </div>
     <div class="block" >
       <label>Tipo de Nota: </label>
-      <select name="tNota">
+      <select [ngModel]='tNotaN'>
         <option value="reco">Recordatorio</option>
         <option value="cump">Cumpleanios</option>
         <option value="cita">Cita</option>

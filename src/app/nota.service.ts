@@ -8,6 +8,10 @@ import { Observable, of } from 'rxjs';
 })
 export class NotaService {
 
+  /*ID = function () {
+    return '_' + Math.random().toString(36).substr(2, 9);
+  };
+*/
   constructor() { }
 
   getNotas(): Observable<Nota[]> {
@@ -16,5 +20,9 @@ export class NotaService {
 
   getNota(id: number): Observable<Nota> {
     return of(NOTAS.find(nota => nota.id === id));
+  }
+
+  addNota(nota: Nota): void {
+    NOTAS.push(nota);
   }
 }

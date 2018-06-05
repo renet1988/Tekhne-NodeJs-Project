@@ -20,4 +20,26 @@ export class DashboardComponent implements OnInit {
     this.notaService.getNotas()
       .subscribe(notas => this.notas = notas);
   }
+
+  isReco(nota: Nota): boolean {
+    if (nota.tiponota.tipoNota === 'Recordatorio') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  isCumple(nota: Nota): boolean {
+    if (nota.tiponota.tipoNota === 'Cumpleanios') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  isCita(nota: Nota): boolean {
+    if (nota.tiponota.tipoNota === 'Cita') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

@@ -1,15 +1,9 @@
+import { TipoNota } from './TipoNota';
+
 export class Nota {
   id: number;
-  tNota: tipoNota;
   name: string;
   body: string;
   date: Date;
+  tiponota: TipoNota;
 }
-
-enum tipoNota {
-  reco = 'Recordatorio',
-  cump = 'Cumpleanios',
-  cita = 'Cita'
-}
-
-

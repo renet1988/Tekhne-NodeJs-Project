@@ -12,6 +12,11 @@ export class NotaAddComponent implements OnInit {
 
   @Input() nota: Nota;
 
+  nueva: Nota;
+  idN: number;
+  tNotaN: '';
+  nameN: '';
+  bodyN: '';
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +29,12 @@ export class NotaAddComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  add(): void {
+    this.nueva.id = this.idN;
+    this.nueva.name = this.nameN;
+    this.nueva.body = this.bodyN;
   }
 
 }

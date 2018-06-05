@@ -1,10 +1,10 @@
 <h1>Notas</h1>
 <div class="grid grid-pad">
   <a *ngFor="let nota of notas" class="col-1-4" routerLink="/detail/{{nota.id}}" >
-    <div class="module nota">
+    <div *ngIf="isReco(nota)">
       <h3>{{nota.name}}</h3>
       <h5>{{nota.body}}</h5>
       <h6>{{nota.date | date}}</h6>
-    </div>
+    </div>    
   </a>
 </div>
