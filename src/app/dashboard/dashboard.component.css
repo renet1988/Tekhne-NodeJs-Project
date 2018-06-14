@@ -42,6 +42,7 @@ h4 {
 }
 .grid-pad {
   padding: 10px 0;
+  float: left;
 }
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
@@ -58,4 +59,7 @@ h4 {
   .module {
     min-width: 60px;
   }
+}
+.center{
+  text-align: center;
 }
